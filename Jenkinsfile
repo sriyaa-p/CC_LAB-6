@@ -16,7 +16,7 @@ pipeline {
                 docker rm -f backend1 backend2 || true
                 docker run -d --name backend1 --network app-network backend-app
                 docker run -d --name backend2 --network app-network backend-app
-                sh 'sleep 3'
+                sleep 3
                 '''
             }
         }
